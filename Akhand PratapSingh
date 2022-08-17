@@ -1,0 +1,36 @@
+import java.util.*;                                      // imported scanner fucntion
+      
+public class Triangle {
+
+int a,b,c;                                               //variable declaretion 
+
+public static void main(String[] args){
+
+  Scanner sc = new Scanner(System.in);                     //scanner function
+  System.out.println("Enter the sides of Triangle");
+  try{                                                    // for insuring number input
+      System.out.println("Enter the 1st sides of Triangle :  ");
+      int a = sc.nextInt();                                          
+      System.out.println("Enter the 2nd sides of Triangle :  ");
+      int b = sc.nextInt();
+      System.out.println("Enter the 3rd sides of Triangle :  ");
+      int c = sc.nextInt();
+      
+      if(a<=0 || b<=0 || c<=0)                              //. checking for invalid imputs such as negative value and zero
+       System.out.println("InvalidInput");
+   else if(a>=(b+c) || c>=(b+a) || b>=(a+c)).               //if sum of two sides is less then the third side then the trangle cannot be formed 
+       System.out.println("Not a Triangle");        
+   else if(a==b && b==c)                                    //checking for equilateral triangle
+       System.out.println("Equilateral Triangle");     
+   else if(((a*a)+(b*b))==(c*c) || ((a*a)+(c*c))==(b*b) || ((c*c)+(b*b))==(a*a)).     // checking for right angled triangle
+       System.out.println("Right angle Triangle");
+   else if(a!=b && b!=c && c!=a)                            // checking for Scalene Triangle
+       System.out.println("Scalene Triangle");
+   else if(a==b || c==a || c==b)
+       System.out.println("Isosceles Triangle");            //. checking for Isosceles Triangle
+    }
+  catch(InputMismatchException ime){
+      System.out.println("Error: your value must be an integer!");
+    }
+}
+}
