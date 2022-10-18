@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 int main(){
-    int s1,s2,s3;
+    int s1=3,s2=3,s3=4;
     printf("Enter the sides of the triangle");
-    scanf("%d%d%d",&s1,&s2,&s3);
+    //scanf("%d%d%d",&s1,&s2,&s3);
     if(s1==0 || s2==0 || s3==0){
         printf("Enter the sides again");
     }
